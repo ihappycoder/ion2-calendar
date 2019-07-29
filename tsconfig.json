@@ -16,7 +16,7 @@
     "target": "es5"
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["demo/", "dist/", "lazyload-demo/", "node_modules", "lib/"],
+  "exclude": ["demo/", "demo-4/", "dist/", "lazyload-demo/", "node_modules", "lib/"],
   "compileOnSave": false,
   "buildOnSave": false,
   "atom": {

@@ -9,4 +9,4 @@ dist/
 */www/
 package-lock.json
 yarn.lock
-
+.vscode/

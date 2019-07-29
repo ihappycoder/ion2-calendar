@@ -28,6 +28,23 @@ export interface CalendarDay {
   isLast?: boolean;
 }
 
+export interface CalendarInfiniteOptions extends CalendarOptions {
+  format?: string;
+  cssClass?: string;
+  id?: string;
+  isSaveHistory?: boolean;
+  canBackwardsSelected?: boolean;
+  defaultScrollTo?: Date;
+  defaultDate?: DefaultDate;
+  defaultDates?: DefaultDate[];
+  defaultDateRange?: { from: DefaultDate; to?: DefaultDate } | null;
+  step?: number;
+  /**
+   * @deprecated this version notwork
+   */
+  showYearPicker?: boolean;
+}
+
 export class CalendarMonth {
   original: CalendarOriginal;
   days: Array<CalendarDay | void>;
