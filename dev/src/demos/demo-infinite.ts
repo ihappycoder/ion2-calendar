@@ -7,21 +7,26 @@ import {
 @Component({
   selector: 'demo-infinite-basic',
   template: /* html */`
-    <ion-calendar-infinite [options]="options"></ion-calendar-infinite>
+    <ion-calendar-infinite 
+      [options]="options"
+      type="string"
+      format="YYYY-MM-DD"
+      (change)="onChange($event)"
+      [(ngModel)]="date"></ion-calendar-infinite>
   `
 })
 export class DemoInfiniteBasicComponent {
 
-  date: Date = new Date();
-  options: CalendarInfiniteOptions
+  date: string[] = ['2019-08-01', '2019-08-02', '2019-08-05'];
+  options: CalendarInfiniteOptions = {
+    pickMode: "multi",
+  };
 
   constructor() {
   }
-
-  openCalendar() {
-    this.options = {
-      defaultDate: this.date
-    };
+  onChange(e: any) {
+    console.log("CHANGE", e)
+    this.date = ['2019-08-01', '2019-08-02', '2019-08-03', '2019-08-04', '2019-08-05'];
   }
 
 }
